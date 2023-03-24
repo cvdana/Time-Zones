@@ -1,7 +1,11 @@
 function showSelectedZone(event) {
   if (event.target.value.length > 0) {
     if (event.target.value === `paris`) {
-      alert(`BOnjour`);
+      let currentDateElement = document.querySelector(`#paris`);
+      let currentDate = moment()
+        .tz(`Europe/Paris`)
+        .format(`dddd, MMMM  D, YYYY h:mmA`);
+      alert(`It is currently ${currentDate} in Paris/Europe`);
     }
     if (event.target.value === `tokyo`) {
       alert(`nihao`);
