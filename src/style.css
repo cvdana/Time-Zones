@@ -1,5 +1,19 @@
+body {
+  background-color: #dde3ea;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+}
 h1 {
   text-align: center;
+}
+img {
+  display: grid;
+  width: 500px;
+  place-items: center;
+  margin: 0;
 }
 footer {
   text-align: center;
