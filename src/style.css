@@ -1,15 +1,49 @@
 body {
   background-color: #dde3ea;
+  font-family: "Lora", serif;
 }
 .container {
   max-width: 700px;
   margin: 0 auto;
+  padding: 30px;
   background-color: #fff;
   border-radius: 3.5%;
 }
 h1 {
   text-align: center;
-  padding: 15px;
+  margin: 10px auto;
+}
+h2 {
+  font-weight: 300;
+  font-size: 25px;
+  margin: 0;
+}
+select {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+}
+.city:last-child {
+  border: none;
+}
+.time {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.date {
+  opacity: 0.6;
 }
 .map {
   display: block;
