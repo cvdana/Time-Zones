@@ -53,6 +53,7 @@ function updateCity(event) {
             `hh:mm:ss`
           )} <small>${cityCurrentTime.format(`A`)}</small></div>
         </div>
+        <a href="/">All cities</a>
   `;
 }
 let citiesSelectElement = document.querySelector(`#time-zones`);
