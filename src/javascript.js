@@ -17,12 +17,12 @@ function updateTime() {
     parisTimeElement.innerHTML = moment().tz(`Europe/Paris`).format(`H:mm:ss`);
   }
 
-  let cairoElement = document.querySelector(`#cairo`);
-  if (cairoElement) {
-    let cairoDateElement = cairoElement.querySelector(`.date`);
-    let cairoTimeElement = cairoElement.querySelector(`.time`);
-    cairoDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
-    cairoTimeElement.innerHTML = moment().tz(`Africa/Cairo`).format(`H:mm:ss`);
+  let dubaiElement = document.querySelector(`#dubai`);
+  if (dubaiElement) {
+    let dubaiDateElement = dubaiElement.querySelector(`.date`);
+    let dubaiTimeElement = dubaiElement.querySelector(`.time`);
+    dubaiDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
+    dubaiTimeElement.innerHTML = moment().tz(`Asia/Dubai`).format(`H:mm:ss`);
   }
 }
 updateTime();
