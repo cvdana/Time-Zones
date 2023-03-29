@@ -16,6 +16,14 @@ function updateTime() {
     parisDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
     parisTimeElement.innerHTML = moment().tz(`Europe/Paris`).format(`H:mm:ss`);
   }
+
+  let cairoElement = document.querySelector(`#cairo`);
+  if (cairoElement) {
+    let cairoDateElement = cairoElement.querySelector(`.date`);
+    let cairoTimeElement = cairoElement.querySelector(`.time`);
+    cairoDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
+    cairoTimeElement.innerHTML = moment().tz(`Africa/Cairo`).format(`H:mm:ss`);
+  }
 }
 updateTime();
 setInterval(updateTime, 1000);
