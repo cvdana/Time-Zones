@@ -15,3 +15,10 @@ function updateTime() {
 }
 updateTime();
 setInterval(updateTime, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityCurrentTime = moment().tz(cityTimeZone);
+}
+let citiesSelectElement = document.querySelector(`#time-zones`);
+citiesSelectElement.addEventListener(`change`, updateCity);
