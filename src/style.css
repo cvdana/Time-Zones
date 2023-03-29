@@ -32,7 +32,7 @@ select {
   justify-content: space-between;
   margin: 15px 0;
   padding: 10px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
 }
 .city:last-child {
   border: none;
@@ -41,7 +41,12 @@ select {
   font-size: 40px;
   font-weight: 500;
 }
-
+.time small {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 36px;
+  vertical-align: middle;
+}
 .date {
   opacity: 0.6;
 }

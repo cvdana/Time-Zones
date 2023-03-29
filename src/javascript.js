@@ -3,26 +3,33 @@ function updateTime() {
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(`.date`);
     let losAngelesTimeElement = losAngelesElement.querySelector(`.time`);
+    losAngelesTime = moment().tz(`America/Los_Angeles`);
     losAngelesDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
-    losAngelesTimeElement.innerHTML = moment()
-      .tz(`America/Los_Angeles`)
-      .format(`H:mm:ss`);
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      `hh:mm:ss [<small>]A[</small>]`
+    );
   }
 
   let parisElement = document.querySelector(`#paris`);
   if (parisElement) {
     let parisDateElement = parisElement.querySelector(`.date`);
     let parisTimeElement = parisElement.querySelector(`.time`);
+    parisTime = moment().tz(`Europe/Paris`);
     parisDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
-    parisTimeElement.innerHTML = moment().tz(`Europe/Paris`).format(`H:mm:ss`);
+    parisTimeElement.innerHTML = parisTime.format(
+      `hh:mm:ss [<small>]A[</small>]`
+    );
   }
 
   let dubaiElement = document.querySelector(`#dubai`);
   if (dubaiElement) {
     let dubaiDateElement = dubaiElement.querySelector(`.date`);
     let dubaiTimeElement = dubaiElement.querySelector(`.time`);
+    dubaiTime = moment().tz(`Asia/Dubai`);
     dubaiDateElement.innerHTML = moment().format(`MMMM Do YYYY`);
-    dubaiTimeElement.innerHTML = moment().tz(`Asia/Dubai`).format(`H:mm:ss`);
+    dubaiTimeElement.innerHTML = dubaiTime.format(
+      `hh:mm:ss [<small>]A[</small>]`
+    );
   }
 }
 updateTime();
@@ -42,7 +49,9 @@ function updateCity(event) {
             <h2>${cityName}</h2>
             <div class="date">${cityCurrentTime.format(`MMMM Do YYYY`)}</div>
           </div>
-          <div class="time">${cityCurrentTime.format(`H:mm:ss`)}</div>
+          <div class="time">${cityCurrentTime.format(
+            `hh:mm:ss`
+          )} <small>${cityCurrentTime.format(`A`)}</small></div>
         </div>
   `;
 }
