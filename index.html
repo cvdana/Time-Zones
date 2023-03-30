@@ -18,7 +18,11 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <img src="images/word.svg" alt="world map" class="map" />
+      <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+      </div>
       <form>
         <select name="time-zone" id="time-zones">
           <option value="" id="select">Select a city</option>
